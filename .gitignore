@@ -1,0 +1,27 @@
+# Binaires compilés
+mlp
+fwd_bf16
+fullbf16
+transformer
+*.o
+a.out
+
+# Data lourde (MNIST)
+data/mnist/*.bin
+
+# Shakespeare on garde (1MB, c'est ok)
+# data/shakespeare/tiny_shakespeare.txt  ← pas ignoré
+
+# Fichiers nsys binaires
+*.nsys-rep
+*.sqlite
+*.qdrep
+
+# Notes perso
+q.txt
+rep.txt
+'projet transformer (1).pdf'
+
+# Python cache
+__pycache__/
+*.pyc
