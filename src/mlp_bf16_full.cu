@@ -533,12 +533,12 @@ int main() {
     x_test = (float*)malloc((size_t)TEST_SIZE * INPUT_SIZE * sizeof(float));
     y_test = (int*)  malloc(TEST_SIZE * sizeof(int));
 
-    load_data("data/X_train.bin", x_train, INPUT_SIZE * TRAIN_SIZE);
-    load_data("data/X_test.bin",  x_test,  INPUT_SIZE * TEST_SIZE);
+    load_data("../data/mnist/X_train.bin", x_train, INPUT_SIZE * TRAIN_SIZE);
+    load_data("../data/mnist/X_test.bin",  x_test,  INPUT_SIZE * TEST_SIZE);
     normalize_data(x_train, INPUT_SIZE * TRAIN_SIZE);
     normalize_data(x_test,  INPUT_SIZE * TEST_SIZE);
-    load_labels("data/y_train.bin", y_train, TRAIN_SIZE);
-    load_labels("data/y_test.bin",  y_test,  TEST_SIZE);
+    load_labels("../data/mnist/y_train.bin", y_train, TRAIN_SIZE);
+    load_labels("../data/mnist/y_test.bin",  y_test,  TEST_SIZE);
 
     struct timespec t0, t1;
     clock_gettime(CLOCK_MONOTONIC, &t0);

@@ -12,11 +12,11 @@ batch_size=1024
 
 one_run=TRAIN_SIZE//batch_size
 
-x_train_np=np.fromfile("data/X_train.bin",dtype=np.float32)
-y_train_np = np.fromfile("data/y_train.bin", dtype=np.int32)
+x_train_np=np.fromfile("../data/mnist/X_train.bin",dtype=np.float32)
+y_train_np = np.fromfile("../data/mnist/y_train.bin", dtype=np.int32)
 
-x_test_np=np.fromfile("data/X_test.bin",dtype=np.float32)
-y_test_np = np.fromfile("data/y_test.bin", dtype=np.int32)
+x_test_np=np.fromfile("../data/mnist/X_test.bin",dtype=np.float32)
+y_test_np = np.fromfile("../data/mnist/y_test.bin", dtype=np.int32)
 
 
 X_train_np = x_train_np[:TRAIN_SIZE * 28 * 28].reshape(TRAIN_SIZE, 1, 28, 28)
